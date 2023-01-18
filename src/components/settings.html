@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" type="text/css" href="../../dist/settings.css">
+  <title>SMMO Guild PVP</title>
+</head>
+<body class="bg-[#2c313e]">
+  <div class="inline-block content-center w-full h-[50px] fixed z-50">
+    <!-- Top Bar -->
+    <div id='title-bar' class="pl-[50px] w-full h-[50px] fixed inline-block bg-[#64c5b1]">
+      <div id="window-buttons" class="float-right flex">
+        <button id="minimize-button"
+          class="hover:bg-[#54a594] top-0 text-white w-[50px] h-[25px] pb-[5px] focus:outline-none items-center flex justify-center text-2xl">
+          <i class="fa-solid fa-window-minimize" style="font-size: 15px"></i>
+        </button>
+        <button id="maximize-button"
+          class="hover:bg-[#54a594] top-0 text-white w-[50px] h-[25px] focus:outline-none items-center flex justify-center text-2xl">
+          <i class="fa-regular fa-window-maximize" style="font-size: 15px"></i>
+        </button>
+        <button id='exit-button'
+          class="hover:bg-red-500 top-0 text-white w-[50px] h-[25px] focus:outline-none items-center flex justify-center text-2xl">
+          <i class="fa-solid fa-xmark text-white"></i>
+        </button>
+      </div>
+      <div class="pt-[12px] pl-[10px] right-0 h-full w-[calc(100%-150px)] text-white inline-block" style="-webkit-app-region: drag">
+        Settings
+      </div>
+    </div>
+
+    <!-- Menu Button -->
+    <div id="menu-toggle" class="inline-block absolute">
+      <div id="toggle-icon">
+        <div id="menu-toggle-bar1"></div>
+        <div id="menu-toggle-bar2"></div>
+        <div id="menu-toggle-bar3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide In Menu -->
+  <div id="menu"
+    class="w-[200px] h-[100%] top-[50px] bg-[#343c49] text-white fixed p-0 left-[-200px] block tansition-transform duration-500">
+    <div
+      class="cursor-pointer flex items-center pl-3 w-[100%] h-[50px] rounded-bl-lg border-b-[3px] border-[#2c313e] hover:bg-[#2c313e]"
+      id="home-menu-item">
+      <i class="fa-solid fa-house !w-[25px]"></i>Home
+    </div>
+    <div
+      class="absolute bottom-[50px] cursor-pointer flex items-center pl-3 w-[100%] h-[50px] rounded-bl-lg border-l-[3px] border-l-white border-b-[3px] border-[#2c313e] hover:bg-[#2c313e]"
+      id="settings-menu-item">
+      <i class="fa-solid fa-screwdriver-wrench !w-[25px]"></i>Settings
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="p-[20px] w-[100%] block absolute bg-[#2c313e] color-[#fff] top-[50px] left-0 right-0 bottom-0 tansition-transform duration-500">
+    <label for="api-key"
+      class="m-2 justify-center text-white inline-block mb-2 text-sm font-medium text-gray-90 whitespace-nowrap">
+      API Key:
+    </label>
+    <input type="text" id="api-key-input"
+      class="m-1 inline-block text-white h-[32px] bg-gray-800 border rounded border-transparent focus:!border-transparent focus:ring-0">
+    <button id="submit-api-key" class="bg-gray-400 rounded p-1 m-1 text-white focus:outline-none focus:border-none focus:bg-gray-600">Submit</button>
+
+    <br></br>
+
+    <label for="user-id"
+      class="m-2 justify-center text-white inline-block mb-2 text-sm font-medium text-gray-90 whitespace-nowrap">
+      User ID:
+    </label>
+    <input type="text" id="user-id-input"
+      class="m-1 inline-block text-white h-[32px] bg-gray-800 border rounded border-transparent focus:!border-transparent focus:ring-0">
+    <button id="submit-user-id" class="bg-gray-400 rounded p-1 m-1 text-white focus:outline-none focus:border-none focus:bg-gray-600">Submit</button>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+
+</html>

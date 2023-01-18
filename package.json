@@ -1,0 +1,71 @@
+{
+  "name": "smmo-pvp",
+  "version": "0.0.1",
+  "description": "Guild War Tool for SMMO",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start .",
+    "watch": "concurrently --kill-others \"npx tailwindcss -i ./src/components/settings.css -o ./dist/settings.css --watch\"  \"nodemon --ignore ./data/ --exec electron-forge start .\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "keywords": [],
+  "author": "MaxN",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "smmo_gt"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "n3xistence",
+        "name": "https://github.com/n3xistence/electron"
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "smmogt"
+      }
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "axios": "^0.19.2",
+    "concurrently": "^7.6.0",
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "flowbite": "^1.5.5",
+    "ini": "^3.0.1",
+    "node-gyp": "^9.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "8.2.0",
+    "electron-rebuild": "^3.2.9",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.20",
+    "python": "^0.0.4",
+    "tailwindcss": "^3.2.4"
+  }
+}

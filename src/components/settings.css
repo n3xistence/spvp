@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Noto Sans');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { 
+    font-family: Noto Sans;
+}
+
+#menu-toggle {
+    padding: 0 6px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: #64c5b1;
+    line-height: 50px;
+    cursor: pointer;
+    transition: left 0.5s;
+}
+
+#menu-toggle-bar1, #menu-toggle-bar2, #menu-toggle-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+#toggle-icon {
+    padding-top: 5px;
+}
+
+.change #menu-toggle-bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change #menu-toggle-bar2 {
+    opacity: 0;
+}
+
+.change #menu-toggle-bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+#menu-toggle:hover {
+    background-color: #54a594
+}
+
+.body {
+    background-color: rgb(42, 42, 42);
+}
